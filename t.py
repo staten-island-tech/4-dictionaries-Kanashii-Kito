@@ -35,4 +35,4 @@ while quarters > 0:
     if quarters <= 0:
         break
 
-print("Martha plays", count, "times before going broke.")
+print(f"Martha plays {count} times before going broke.")
