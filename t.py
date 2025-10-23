@@ -14,8 +14,6 @@ while quarters > 0:
     if first == 35:
         quarters += 30
         first = 0
-    if quarters <= 0:
-        break
 
     second += 1
     quarters -= 1
@@ -23,8 +21,6 @@ while quarters > 0:
     if second == 100:
         quarters += 60
         second = 0
-    if quarters <= 0:
-        break
 
     third += 1
     quarters -= 1
@@ -32,7 +28,5 @@ while quarters > 0:
     if third == 10:
         quarters += 9
         third = 0
-    if quarters <= 0:
-        break
 
 print(f"Martha plays {count} times before going broke.")
