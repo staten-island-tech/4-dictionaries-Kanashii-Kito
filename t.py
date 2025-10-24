@@ -5,15 +5,21 @@ first = int(input("First Slot Machine | Input amount of time this Slot Machine w
 second = int(input("Second Slot Machine | Input amount of time this Slot Machine was played already:  "))
 third = int(input("Third Slot Machine | Input amount of time this Slot Machine was played already:  "))
 
-count = 0
+count = int(0)
 
 while quarters > 0:
+
     first += 1
     quarters -= 1
     count += 1
     if first == 35:
         quarters += 30
         first = 0
+
+    print (count)
+    print (f"Quarters: {quarters}")
+
+    quarters > 0:
 
     second += 1
     quarters -= 1
@@ -22,6 +28,9 @@ while quarters > 0:
         quarters += 60
         second = 0
 
+    print (count)
+    print (f"Quarters: {quarters}")
+
     third += 1
     quarters -= 1
     count += 1
@@ -29,4 +38,12 @@ while quarters > 0:
         quarters += 9
         third = 0
 
+    print (count)
+    print (f"Quarters: {quarters}")
+
 print(f"Martha plays {count} times before going broke.")
+
+
+
+'''-----------------------------------------------------------------------'''
+
