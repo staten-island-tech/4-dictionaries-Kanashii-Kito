@@ -46,5 +46,3 @@ while quarters> 0:
     print (f"Quarters: {quarters}")
 
 print(f"Martha plays {count} times before going broke.")
-
-
