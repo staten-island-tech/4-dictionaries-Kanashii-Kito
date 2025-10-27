@@ -7,7 +7,7 @@ third = int(input("Third Slot Machine | Input amount of time this Slot Machine w
 
 count = int(0)
 
-while quarters > 1:
+while quarters> 0:
 
     first += 1
     quarters -= 1
@@ -19,7 +19,8 @@ while quarters > 1:
     print (count)
     print (f"Quarters: {quarters}")
 
-    # quarters.check > 0
+    if quarters == 0:
+        break
 
     second += 1
     quarters -= 1
@@ -30,6 +31,9 @@ while quarters > 1:
 
     print (count)
     print (f"Quarters: {quarters}")
+
+    if quarters == 0:
+        break
 
     third += 1
     quarters -= 1
@@ -43,7 +47,4 @@ while quarters > 1:
 
 print(f"Martha plays {count} times before going broke.")
 
-
-
-'''-----------------------------------------------------------------------'''
 
