@@ -1,58 +1,58 @@
-Cart = []
-Total_Cost = 0
+# Cart = []
+# Total_Cost = 0
 
-'''Delivery_Corporation'''
-Delivery_Corporation = [
-{
-    "Name": "Standard || Normal Route and Speed",
-    "Cost": 2499.99,
-    "Department": "Semi Truck Shipping", 
-    "Description": "Packages From The Depths Hell.",
-},
+# '''Delivery_Corporation'''
+# Delivery_Corporation = [
+# {
+#     "Name": "Standard || Normal Route and Speed",
+#     "Cost": 2499.99,
+#     "Department": "Semi Truck Shipping", 
+#     "Description": "Packages From The Depths Hell.",
+# },
 
-{
-    "Name": "Premium || Fast Route and Speed",
-    "Cost": 4999.99,
-    "Department": "Semi Truck Shipping", 
-    "Description": "Faster Delivery of Packages From The Depths Hell.",
-},
+# {
+#     "Name": "Premium || Fast Route and Speed",
+#     "Cost": 4999.99,
+#     "Department": "Semi Truck Shipping", 
+#     "Description": "Faster Delivery of Packages From The Depths Hell.",
+# },
 
-{
-    "Name": "Hell || Idk Route and Speed",
-    "Cost": 19999.99,
-    "Department": "Semi Truck Shipping", 
-    "Description": "Faster Delivery of Packages From The Depths Hell.",
-},
+# {
+#     "Name": "Hell || Idk Route and Speed",
+#     "Cost": 19999.99,
+#     "Department": "Semi Truck Shipping", 
+#     "Description": "Faster Delivery of Packages From The Depths Hell.",
+# },
 
-{
-    "Name": "Package || Insurance",
-    "Cost": 99999.99,
-    "Department": "Semi Truck Shipping", 
-    "Description": "Insurance for your Packages from Hell."
-},
-]
-for index, item in enumerate(Delivery_Corporation):
-    print(index, ":", item["Name"])
-Package_Order = input("What Type of Delivery would you like? State 'OID' when you're done. :  ")
-
-
-while Package_Order != "OID":
-    Cart.append(Package_Order)
-    print(f"Types of Delivery Packages in ur Cart:  {Cart}")
-    for index, item in enumerate(Delivery_Corporation):
-        print(index, ":", item["Name"])
-    Package_Order = input("What Type of Delivery would you like? State 'OID' when you're done. :  ")
+# {
+#     "Name": "Package || Insurance",
+#     "Cost": 99999.99,
+#     "Department": "Semi Truck Shipping", 
+#     "Description": "Insurance for your Packages from Hell."
+# },
+# ]
+# for index, item in enumerate(Delivery_Corporation):
+#     print(index, ":", item["Name"])
+# Package_Order = input("What Type of Delivery would you like? State 'OID' when you're done. :  ")
 
 
-for item in Delivery_Corporation:
-    if item["Name"] in Cart:
-        Total_Cost += item["Cost"]
+# while Package_Order != "OID":
+#     Cart.append(Package_Order)
+#     print(f"Types of Delivery Packages in ur Cart:  {Cart}")
+#     for index, item in enumerate(Delivery_Corporation):
+#         print(index, ":", item["Name"])
+#     Package_Order = input("What Type of Delivery would you like? State 'OID' when you're done. :  ")
 
-print("\nYour Cart:  ")
-for item in Cart:
-    print(f"- {item}")
 
-print(f"Total Cost: ${Total_Cost:,.2f}")
+# for item in Delivery_Corporation:
+#     if item["Name"] in Cart:
+#         Total_Cost += item["Cost"]
+
+# print("\nYour Cart:  ")
+# for item in Cart:
+#     print(f"- {item}")
+
+# print(f"Total Cost: ${Total_Cost:,.2f}")
 
 
 '''------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
@@ -61,7 +61,7 @@ print(f"Total Cost: ${Total_Cost:,.2f}")
 
 
 # stuff below is from chat gpt that i'll attempt to understand and throw in to my code to help me make it better
-'''Would you like me to show how to display the cost next to each cart item (e.g. “Premium || Fast Route and Speed — $4,999.99”)? It’s an easy and nice upgrade.'''
+'''Would you like me to show how to display the cost next to each cart item (e.g. “Premium || Fast Route and Speed — $4,999.99”)? Its an easy and nice upgrade.'''
 
 
 
@@ -102,13 +102,6 @@ for item in Cart:
     print(f"- {item['Name']} (${item['Cost']:,.2f})")
 
 print(f"\nTotal Cost: ${Total_Cost:,.2f}")
-
-
-
-
-for item in Delivery_Corporation:
-    if item["Name"].lower() in [x.lower() for x in Cart]:
-        Total_Cost += item["Cost"]
 
 
 
