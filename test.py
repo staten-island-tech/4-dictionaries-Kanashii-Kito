@@ -30,6 +30,13 @@ Delivery_Corporation = [
     "Department": "Semi Truck Shipping", 
     "Description": "Insurance for your Packages from Hell."
 },
+
+{
+    "Name": "Contract || Contract",
+    "Cost": 0.00,
+    "Department": "NDC-M", 
+    "Description": "N/A."
+},
 ]
 for index, item in enumerate(Delivery_Corporation):
     print(index, ":", item["Name"])
@@ -69,6 +76,16 @@ import random
 ran = random.randint(10000000,11000000)
 print (f"Your OID/Order Identification Number is:  {ran}")
 
+
+
+
+print ("Please input space or '-' to sign.")
+
+sign = input ("Please sign:  ")
+if sign == "-":
+    print ("Thank you for signing ur life away. We now own you. You are now property of the state.")
+elif sign == " ":
+    print ("Hai, friend.")
 
 
 
