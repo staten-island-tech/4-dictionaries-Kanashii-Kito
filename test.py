@@ -50,22 +50,27 @@ while Package_Order != "OID":
     Package_Order = input("Select another (or 'OID' to finish): ")
 
 
-# for item in Delivery_Corporation:
-#     if item["Name"] in Cart:
-#         Total_Cost += item["Cost"]
-
-
 # Calculate total cost
+
 Total_Cost = sum(item["Cost"] for item in Cart)
 
 print("\nYour Receipt:")
 for item in Cart:
     print(f"- {item['Name']} (${item['Cost']:,.2f})") # better formated one
+    # if you forget:
+        # the comma is so we can have a comma every 3 numbers and 2f is for a decimal point and 2 decimals
 
 print(f"\nTotal Cost: ${Total_Cost:,.2f}") # better formated one
 
 
-'''------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+
+import random
+
+ran = random.randint(10000000,11000000)
+print (f"Your OID/Order Identification Number is:  {ran}")
+
+
+
 
 
 
