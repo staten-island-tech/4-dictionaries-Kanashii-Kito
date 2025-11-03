@@ -40,10 +40,10 @@ Delivery_Corporation = [
 ]
 for index, item in enumerate(Delivery_Corporation):
     print(index, ":", item["Name"])
-Package_Order = input("What Type of Delivery would you like? State 'OID' when you're done. :  ")
+Package_Order = input("What Type of Delivery would you like? Input the Number before the name of said Type of Delivery. State 'OIDN' when you're done. :  ")
 
 
-while Package_Order != "OID":
+while Package_Order != "OIDN":
     try:
         index = int(Package_Order)
         if 0 <= index < len(Delivery_Corporation):
@@ -52,9 +52,9 @@ while Package_Order != "OID":
         else:
             print("Invalid option, try again.")
     except ValueError:
-        print("Please enter a valid number or 'OID'.")
+        print("Please enter a valid number or 'OIDN'.")
     
-    Package_Order = input("Select another (or 'OID' to finish): ")
+    Package_Order = input("Select another (or 'OIDN' to finish): ")
 
 
 # Calculate total cost
@@ -74,7 +74,7 @@ print(f"\nTotal Cost: ${Total_Cost:,.2f}") # better formated one
 import random
 
 ran = random.randint(10000000,11000000)
-print (f"Your OID/Order Identification Number is:  {ran}")
+print (f"Your OIDN  /  Order Identification Number is:  {ran}")
 
 
 
@@ -85,7 +85,8 @@ sign = input ("Please sign:  ")
 if sign == "-":
     print ("Thank you for signing ur life away. We now own you. You are now property of the state.")
 elif sign == " ":
-    print ("Hai, friend.")
+    print ("Hai, friend. || Please Go to  48°52.6'S Latitude and 123°23.6'W Longitude to pick up ur package.")
+
 
 
 
