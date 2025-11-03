@@ -1,4 +1,5 @@
 Cart = []
+TD_OIDN = True
 Total_Cost = 0
 
 '''Delivery_Corporation'''
@@ -68,6 +69,43 @@ for item in Cart:
         # the comma is so we can have a comma every 3 numbers and 2f is for a decimal point and 2 decimals
 
 print(f"\nTotal Cost: ${Total_Cost:,.2f}") # better formated one
+
+'''-------------------------------------------------------------------------------------------------------------------------------------------------- it messsed up here'''
+
+Comfirm = input("Enter 'ORDER COMFIRM' In all Caps to comfirm ur order. If you would like to select more or remove something please state 'DOC' in all caps.")
+
+if Comfirm.upper() == "DOC":
+    TD_OIDN = True
+
+
+if Comfirm.upper() == "ORDER COMFIRM":
+    TD_OIDN = False
+
+
+if TD_OIDN == False:
+    print("Ur Order Has Been Comfirmed.")
+
+
+
+elif TD_OIDN == True:
+    while Package_Order != "OIDN":
+        try:
+            index = int(Cart)
+            if 0 <= index < len(Cart):
+                Cart.pop(Cart[index])
+                print(f"Removed: {Cart[index]['Name']}")
+            else:
+                print("Invalid option, try again.")
+        except ValueError:
+            print("Please enter a valid number or 'OIDN'.")
+        
+        Package_Order = input("Select another (or 'OIDN' to finish): ")
+
+
+'''------------------------------------------------------------------------------------------------------------------------------'''
+
+
+
 
 
 
