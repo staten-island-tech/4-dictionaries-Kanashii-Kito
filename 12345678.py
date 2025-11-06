@@ -40,14 +40,22 @@ while Package_Order != "OIDN":
     Package_Order = input("Select another (or 'OIDN' to finish): ")
 
 # --------------------  Confirmation  --------------------
-Comfirm = input("Enter 'ORDER COMFIRM' in all caps to confirm your order. If you would like to modify your cart please enter 'DOC': ")
+Comfirm = input("Enter anything confirm your order. If you would like to modify your cart please enter 'DOC': ")
+
 
 for index, item in enumerate(Cart):
     print(index, ":", item["Name"])
 
-if Comfirm.upper() == "DOC":
+
+
+if Comfirm == "ORDER COMFIRM":
+    print("Your order has been confirmed.")
+
+if Comfirm == "DOC":
     Package_Order = input("Enter the number of the item to remove (or 'OIDN' to finish): ")
     while Package_Order != "OIDN":
+        for index, item in enumerate(Cart):
+            print(index, ":", item["Name"])
         try:
             index = int(Package_Order)
             if 0 <= index < len(Cart):
@@ -59,8 +67,6 @@ if Comfirm.upper() == "DOC":
             print("Please enter a valid number or input 'OIDN'.")
         Package_Order = input("Enter another to remove (or input 'OIDN' to finish): ")
 
-if Comfirm.upper() == "ORDER COMFIRM":
-    print("Your order has been confirmed.")
 
 
 
